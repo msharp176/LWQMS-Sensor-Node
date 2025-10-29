@@ -45,11 +45,6 @@ gpio_driven_irq_context_t irq_button2 = {
 
 void isr_gpio_master(uint gpio_pin, uint32_t irq_src) {
 
-    /**
-     * "I heard that his interrupt service routine selection method is O(1)" - All Women
-     * https://en.meming.world/images/en/thumb/7/72/Girls_Gossiping.jpg/450px-Girls_Gossiping.jpg
-     */
-
     // Acknowledge the ISR
     gpio_driven_irq_context_t received_context_data = {
         .pin = gpio_pin,
